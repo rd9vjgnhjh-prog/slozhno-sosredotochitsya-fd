@@ -1,5 +1,32 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.header__theme-menu-button {
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: var(--button-color);
+  padding: 8px 16px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color);
 }
