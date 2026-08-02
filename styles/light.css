@@ -1,10 +1,5 @@
 :root.theme-light {
   --bg-image-url: url(/images/cover-image-light.png);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-image-url: url(/images/cover-image-light.png);
-    --button-color: rgba(53, 52, 48, 1);
-  }
+  --border-button-color: rgba(53, 52, 48, 1);
+  --text-color: rgba(53, 52, 48, 1);
 }

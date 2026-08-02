@@ -4,29 +4,105 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  height: 1024px;
+  padding: 20px auto;
+}
+
+.decorated-zone {
+  position: relative;
+  overflow: hidden;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-button-color);
+}
+
+.decorated-zone::before {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+  margin: 20px 20px auto auto;
+}
+
+.decorated-zone::after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+  margin: auto auto 20px 20px;
 }
 
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
+  min-width: 230px;
   list-style: none;
   justify-self: center;
   align-self: flex-start;
+  margin: 20px auto auto;
 }
 
 .header__theme-menu-button {
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
+  text-transform: lowercase;
   background-color: transparent;
   border: none;
-  color: var(--button-color);
-  padding: 8px 16px;
+  color: var(--text-color);
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-color);
+  border: 1px solid var(--border-button-color);
+}
+
+.header__decorated-zone {
+  display: none;
+  position: absolute;
+  justify-self: end;
+  margin: 20px 48px auto auto;
+  color: var(--text-color);
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.header__decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: var(--border-button-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--border-button-color);
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+}
+
+.header_title {
+width: 759px;
+height: 130px;
+font-family: 'IBM Plex Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 157px;
+line-height: 82.5%;
+color: #DB00FF;
+text-shadow: 4px 4px 0px #FF0070;
 }

@@ -1,10 +1,9 @@
 :root.theme-dark {
   --bg-image-url: url(/images/cover-image-dark.png);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-image-url: url(/images/cover-image-dark.png);
-    --button-color: rgba(255, 0, 112, 1);
+  --border-button-color: rgba(255, 0, 112, 1);
+  --text-color: rgba(255, 0, 112, 1);
+  
+  .header__decorated-zone {
+    display: block;
   }
 }
