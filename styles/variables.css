@@ -1,17 +1,14 @@
 :root {
   --h1-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --h1-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-}
-
-:root {
   --bg-image-url: url(/images/cover-image-dark.png);
   --bg-color: rgba(0, 0, 40, 1);
   --accent-color: rgba(255, 0, 112, 1);
   --text-color: rgba(255, 0, 112, 1);
   --text-color-card: rgba(241, 178, 206, 1);
   --border-color: rgba(255, 0, 112, 1);
+  --border-color-hover: rgba(255, 0, 112, 0.4);
   --title-color: rgba(219, 0, 255, 1);
   --title-color-card: rgba(0, 0, 40, 1);
   --header-decoration-zone: block;
 }
-

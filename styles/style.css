@@ -68,7 +68,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--border-color-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -112,29 +112,28 @@
 }
 
 .header__title_text {
-  align-self: flex-end;
-  margin: 273px auto 0px 0px;
+  justify-self: start;
   font-family: "IBM Plex Mono", sans-serif;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   font-size: var(--h1-size-desktop);
   line-height: 82.5%;
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
+  margin: 0;
 }
 
 .header__title_paragraph {
   max-width: 491px;
   max-height: 70px;
   justify-self: end;
-  align-self: center;
   font-family: "IBM Plex Mono", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
   color: rgba(0, 0, 40, 1);
-  margin-right: 20px;
+  margin: 0px 20px 0px 0px;
 }
 
 .title-decor {
@@ -153,17 +152,19 @@
 }
 
 .main__content_section_title {
+  max-width: 315px;
   font-family: "IBM Plex Mono", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
   color: var(--text-color);
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .main__content_section_card {
   display: grid;
+  gap: 20px;
 }
 
 .card_title {
@@ -174,6 +175,7 @@
   line-height: 23px;
   color: var(--title-color-card);
   background-color: var(--accent-color);
+  margin: 0px;
 }
 
 .card_text {
@@ -182,6 +184,7 @@
   font-size: 18px;
   line-height: 23px;
   color: var(--text-color-card);
+  margin: 10px 0px 0px;
 }
 
 .text_link {
@@ -190,22 +193,28 @@
   text-shadow: 4px 4px 0px var(--accent-color);
 }
 
+.text_link:hover {
+  border-bottom: 1px solid var(--text-color-card);
+}
+
+.text_link:focus {
+  border: 1px solid var(--text-color-card);
+}
+
 .content_section_why {
   grid-template-columns: 1fr 2fr;
 }
 
 .content_section_what {
-  grid-template-rows: 1fr auto;
+  grid-template-rows: max-content;
 }
 
 .section_card_what {
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
 }
 
 .content_section_how {
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
 }
 
 .card_title_section_how {
@@ -214,9 +223,10 @@
 
 .gallery {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 .gallery_item {
@@ -275,19 +285,19 @@ footer {
 
 @media (width < 1024px) {
   .header {
-    grid-template-rows: 1fr 2fr;
-    max-height: 1024px;
+    grid-template-rows: 1fr 1fr;
+    min-height: 1024px;
   }
 
   .header__theme-menu {
     display: grid;
     justify-self: end;
-    align-self: flex-end;
+    align-self: center;
   }
 
   .header__theme-menu-list {
     display: grid;
-    margin: 192px 20px auto auto;
+    margin: auto 20px auto auto;
   }
 
   .header__title_paragraph {
@@ -307,7 +317,7 @@ footer {
 
 @media (width < 768px) {
   .header {
-    max-height: 668px;
+    min-height: 668px;
     margin-bottom: 40px;
   }
 
