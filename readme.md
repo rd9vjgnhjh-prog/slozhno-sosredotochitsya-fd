@@ -1,1 +1,0 @@
-https://github.com/rd9vjgnhjh-prog/slozhno-sosredotochitsya-fd
